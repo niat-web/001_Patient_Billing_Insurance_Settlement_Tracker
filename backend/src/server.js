@@ -16,7 +16,7 @@ const dashboard = require('./routes/dashboard');
 
 // Middleware
 app.use(cors({
-  origin: "*",
+  origin: "https://zero01-patient-billing-insurance-aplm.onrender.com",
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
