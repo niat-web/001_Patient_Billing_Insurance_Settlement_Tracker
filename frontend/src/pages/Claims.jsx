@@ -30,6 +30,7 @@ export default function Claims() {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { loadData(); }, [filterStatus]);
 
   const handleSubmit = async (e) => {
@@ -158,7 +159,7 @@ export default function Claims() {
                     value={formData.session_id} 
                     onChange={e => {
                       const selId = e.target.value;
-                      const session = sessions.find(s => s.id == selId);
+                      const session = sessions.find(s => s.id === parseInt(selId, 10));
                       setFormData({
                         ...formData, 
                         session_id: selId,

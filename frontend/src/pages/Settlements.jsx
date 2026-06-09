@@ -34,7 +34,7 @@ export default function Settlements() {
 
   const handleClaimSelect = (e) => {
     const cid = e.target.value;
-    const claim = approvedClaims.find(c => c.id == cid);
+    const claim = approvedClaims.find(c => c.id === parseInt(cid, 10));
     setSelectedClaim(claim);
     setFormData({
       ...formData,

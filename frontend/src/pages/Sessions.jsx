@@ -29,6 +29,7 @@ export default function Sessions() {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { loadData(); }, [filterType]);
 
   const handleSubmit = async (e) => {
